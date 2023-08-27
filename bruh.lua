@@ -158,13 +158,5 @@ getgenv().AimPart = Rise.Aimbot.Part -- For R15 Games: {UpperTorso, LowerTorso, 
                 end
             end
         end
-         if CheckIfJumped == true then
-       if AimlockTarget.Character.HuDDDDDDDDDDWmanoid.FloorMaterial == Enum.Material.Air then
-    
-           getgenv().AimPart = "UpperTorso"
-       else
-         getgenv().AimPart = getgenv().OldAimPart
-
-       end
     end
 end)
