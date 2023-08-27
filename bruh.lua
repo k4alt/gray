@@ -1,7 +1,7 @@
-getgenv().OldAimPart = Rise.Aimbot.Part
-getgenv().AimPart = Rise.Aimbot.Part -- For R15 Games: {UpperTorso, LowerTorso, HumanoidRootPart, Head} | For R6 Games: {Head, Torso, HumanoidRootPart}  
+getgenv().OldAimPart = "UpperTorso"
+getgenv().AimPart = "Head" -- For R15 Games: {UpperTorso, LowerTorso, HumanoidRootPart, Head} | For R6 Games: {Head, Torso, HumanoidRootPart}  
     getgenv().AimlockKey = Rise.Aimbot.Keybind
-    getgenv().AimRadius = Rise.Aimbot.Radius -- How far away from someones character you want to lock on at
+    getgenv().AimRadius = 30 -- How far away from someones character you want to lock on at
     getgenv().ThirdPerson = Rise.Aimbot.ThirdPerson
     getgenv().FirstPerson = Rise.Aimbot.FirstPerson
     getgenv().TeamCheck = false -- Check if Target is on your Team (True means it wont lock onto your teamates, false is vice versa) (Set it to false if there are no teams)
@@ -158,5 +158,13 @@ getgenv().AimPart = Rise.Aimbot.Part -- For R15 Games: {UpperTorso, LowerTorso, 
                 end
             end
         end
+         if CheckIfJumped == true then
+       if AimlockTarget.Character.HuDDDDDDDDDDWmanoid.FloorMaterial == Enum.Material.Air then
+    
+           getgenv().AimPart = "UpperTorso"
+       else
+         getgenv().AimPart = getgenv().OldAimPart
+
+       end
     end
 end)
