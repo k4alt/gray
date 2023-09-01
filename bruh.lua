@@ -10,6 +10,7 @@ getgenv().AimPart = "Head" -- For R15 Games: {UpperTorso, LowerTorso, HumanoidRo
     getgenv().CheckIfJumped = true
     getgenv().Smoothness = Rise.Aimbot.Smoothness
     getgenv().SmoothnessAmount = Rise.Aimbot.Amount
+    getgenv().DeathCheck = Rise.Aimbot.DeathCheck
 
     local Players, Uis, RService, SGui = game:GetService"Players", game:GetService"UserInputService", game:GetService"RunService", game:GetService"StarterGui";
     local Client, Mouse, Camera, CF, RNew, Vec3, Vec2 = Players.LocalPlayer, Players.LocalPlayer:GetMouse(), workspace.CurrentCamera, CFrame.new, Ray.new, Vector3.new, Vector2.new;
