@@ -1,16 +1,15 @@
-getgenv().OldAimPart = Rise.Aimbot.Part
-getgenv().AimPart = Rise.Aimbot.Part -- For R15 Games: {UpperTorso, LowerTorso, HumanoidRootPart, Head} | For R6 Games: {Head, Torso, HumanoidRootPart}  
+getgenv().OldAimPart = "UpperTorso"
+getgenv().AimPart = "Head" -- For R15 Games: {UpperTorso, LowerTorso, HumanoidRootPart, Head} | For R6 Games: {Head, Torso, HumanoidRootPart}  
     getgenv().AimlockKey = Rise.Aimbot.Keybind
     getgenv().AimRadius = 30 -- How far away from someones character you want to lock on at
-    getgenv().ThirdPerson = true 
-    getgenv().FirstPerson = true
+    getgenv().ThirdPerson = Rise.Aimbot.ThirdPerson
+    getgenv().FirstPerson = Rise.Aimbot.FirstPerson
     getgenv().TeamCheck = false -- Check if Target is on your Team (True means it wont lock onto your teamates, false is vice versa) (Set it to false if there are no teams)
-    getgenv().PredictMovement = Rise.Aimbot.UsePrediction -- Predicts if they are moving in fast velocity (like jumping) so the aimbot will go a bit faster to match their speed 
+    getgenv().PredictMovement = true -- Predicts if they are moving in fast velocity (like jumping) so the aimbot will go a bit faster to match their speed 
     getgenv().PredictionVelocity = Rise.Aimbot.Prediction
     getgenv().CheckIfJumped = true
     getgenv().Smoothness = Rise.Aimbot.Smoothness
-    getgenv().SmoothnessAmount = Rise.Aimbot.SmoothAmount
-    getgenv().DeathCheck = Rise.Aimbot.DeathCheck
+    getgenv().SmoothnessAmount = Rise.Aimbot.Amount
 
     local Players, Uis, RService, SGui = game:GetService"Players", game:GetService"UserInputService", game:GetService"RunService", game:GetService"StarterGui";
     local Client, Mouse, Camera, CF, RNew, Vec3, Vec2 = Players.LocalPlayer, Players.LocalPlayer:GetMouse(), workspace.CurrentCamera, CFrame.new, Ray.new, Vector3.new, Vector2.new;
