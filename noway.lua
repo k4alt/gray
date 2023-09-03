@@ -1,5 +1,40 @@
 if getgenv().Aiming then return getgenv().Aiming end
+if Rise.Main.Adonis_BP == true then
+local plr = game:GetService("Players").LocalPlayer
 
+local cclosure = syn_newcclosure or newcclosure or nil
+
+if not cclosure or not hookmetamethod then
+
+plr:Kick("\n\nYour exploit doesn't support hookmetamethod\n(x.synapse.to | script-ware.com)\n")
+
+end
+
+local oldNamecall
+
+oldNamecall = hookmetamethod(game, "namecall", cclosure(function(self,...)
+
+local NamecallMethod = getnamecallmethod()
+
+local args = {...}
+
+if (NamecallMethod == "Kick" or NamecallMethod == "kick") and not checkcaller() then
+
+   if self ~= plr then
+
+       return oldNamecall(self,...)
+
+   end
+
+   return
+end
+
+return oldNamecall(self,...)
+
+end))
+
+print("abp ld")
+end
 
 
 -- // Services
@@ -37,14 +72,15 @@ local tableinsert = table.insert
 
 if Rise.Silent.ClosestPart == true then
    if Rise.Silent.HitParts == "4" then
-     getgenv().Rise.Silent.Part = {"Head", "UpperTorso", "HumanoidRootPart", "LowerTorso"},
+     getgenv().Rise.Silent.Part = {"Head", "UpperTorso", "HumanoidRootPart", "LowerTorso"}
+   elseif Rise.Silent.HitParts == "8" then
+     getgenv().Rise.Silent.Part = {"Head", "LeftArm", "RightArm", "UpperTorso", "LowerTorso", "RightFoot", "LeftFoot", "HumanoidRootPart"}
    else
-   if Rise.Silent.HitParts == "8" then
-     getgenv().Rise.Silent.Part = {"Head", "LeftArm", "RightArm", "UpperTorso", "LowerTorso", "RightFoot", "LeftFoot", "HumanoidRootPart"},
-   else
-     getgenv().Rise.Silent.Part = {"Head", "UpperTorso", "LowerTorso", "LeftFoot", "LeftLowerLeg", "LeftUpperLeg", "RightFoot", "RightLowerLeg", "RightUpperLeg", "LeftHand", "LeftLowerArm", "LeftUpperArm", "RightHand", "RightLowerArm", "RightUpperArm", "HumanoidRootPart"},
+     getgenv().Rise.Silent.Part = {"Head", "UpperTorso", "LowerTorso", "LeftFoot", "LeftLowerLeg", "LeftUpperLeg", "RightFoot", "RightLowerLeg", "RightUpperLeg", "LeftHand", "LeftLowerArm", "LeftUpperArm", "RightHand", "RightLowerArm", "RightUpperArm", "HumanoidRootPart"}
    end
 end
+
+
 -- // Silent Aim Vars
 getgenv().Aiming = {
     Enabled = Rise.Silent.Enabled,
