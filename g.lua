@@ -1,3 +1,105 @@
+getgenv().Rise = {
+    ["Main"] = {
+        GUI = true,
+        Adonis_BP = false, -- Breaks sometimes (no need to use on regular DH)
+        Notifications = false,
+        AntiAimViewer = true,
+        Resolver = true
+    },
+    ["Silent"] = {
+        Enabled = true,
+        HitChance = 100,
+        Prediction = 0.155,
+        Part = "HumanoidRootPart",
+        UseKeybind = true,
+        Keybind = "k",
+        ClosestPart = false,
+        HitParts = "8", -- 4, 8, 16
+        Checks = {
+            DeathCheck = false,
+            VisibleCheck = true
+        }
+    },
+    ["Chat"] = {
+        Enabled = true,
+        FOV = ".fov",
+        Prediction = ".pred",
+        HitChance = ".hc",
+        AutoPred = ".ap",
+        ClosestPart = ".cp",
+        Part = ".prt"
+    },
+    ["AutoPrediction"] = {  -- Credits to Evolution for the sets
+        Enabled = true, 
+        Sets = {
+            P20 = 0.102,
+            P40 = 0.125,
+            P50 = 0.155,
+            P60 = 0.132,
+            P70 = 0.136,
+            P80 = 0.130,
+            P90 = 0.136,
+            P105 = 0.138,
+            P110 = 0.146,
+            P125 = 0.149,
+            P130 = 0.151,
+            P150 = 0.162,
+            P175 = 0.172,
+            P200 = 0.185,
+            P225 = 0.198,
+            P250 = 0.206,
+            P275 = 0.214,  
+        }
+    },
+    ["FOV"] = {
+        Visible = false,
+        Radius = 40,
+        Sides = 25,
+        Color = Color3.fromRGB(255, 255, 255),
+    },
+    ["Aimbot"] = {
+        Enabled = true,
+        Keybind = "c",
+        Part = "UpperTorso",
+        Prediction = 4.5,
+        FirstPerson = true,
+        ThirdPerson = true,
+        Radius = 35,
+        Smoothness = false,
+        Amount = 0.0327,
+        Checks = {
+            DeathCheck = true,
+            WallCheck = true
+        }
+    },
+    ["InventorySorter"] = {
+        Enabled = true, 
+        Keybind = "j", 
+        List = {"[Double-Barrel SG]","[Revolver]","[TacticalShotgun]", "[Shotgun]", "[SMG]"} -- up to 9
+    },
+    ["Macro"] = {
+        Enabled = true, 
+        Keybind = "q"
+    },
+    ["Misc"] = {
+        MemSpoofer = false,
+        Minimum = 500,
+        Maximum = 800,
+
+        UseLay = true,
+        LayKeybind = "v"
+    },
+    ["Esp"] = {
+        Enabled = true,
+        Bounding_Box = true,
+        Fill_Box = false, 
+        Fill_Transparency = 0.75,
+        Show_Distance = false,
+        Show_Name = true,
+        Show_Health = true, 
+        Health_Type = "Bar"
+    }
+}
 
 local repo = 'https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/'
 
