@@ -55,7 +55,11 @@ local tableremove = table.remove
 local tableinsert = table.insert
 
 if Rise.Silent.ClosestPart == true then
-  getgenv().Rise.Silent.Part = {"HumanoidRootPart", "UpperTorso", "LowerTorso", "HumanoidRootPart", "RightFoot", "LeftFoot"}
+   if Rise.Silent.HitParts == "8" then
+     getgenv().Rise.Silent.Part = {"Head", "UpperTorso", "HumanoidRootPart", "RightFoot", "LeftFoot"},
+   else
+     getgenv().Rise.Silent.Part = {"Head", "LeftArm", "RightArm", "UpperTorso", "LowerTorso", "RightFoot", "LeftFoot", "HumanoidRootPart"},
+   end
 end
 -- // Silent Aim Vars
 getgenv().Aiming = {
