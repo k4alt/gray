@@ -70,9 +70,6 @@ local FindFirstChild = Instancenew("Part").FindFirstChild
 local tableremove = table.remove
 local tableinsert = table.insert
 
-if Rise.Silent.ClosestPart == true then
-   getgenv().Rise.Silent.Part = {"Head", "UpperTorso", "HumanoidRootPart", "LowerTorso"}
-end
 
 
 -- // Silent Aim Vars
