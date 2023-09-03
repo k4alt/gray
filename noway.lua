@@ -71,7 +71,7 @@ local tableremove = table.remove
 local tableinsert = table.insert
 
 if Rise.Silent.ClosestPart == true then
-   getgenv().Rise.Silent.Part = {"HumanoidRootPart", "UpperTorso", "LowerTorso", "HumanoidRootPart", "RightFoot", "LeftFoot"}
+   getgenv().Rise.Silent.Part = {"Head", "UpperTorso", "HumanoidRootPart", "LowerTorso"}
 end
 
 
