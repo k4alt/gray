@@ -1,4 +1,3 @@
-if getgenv().Aiming then return getgenv().Aiming end
 if Rise.Main.Adonis_BP == true then
 local plr = game:GetService("Players").LocalPlayer
 
@@ -36,6 +35,7 @@ end))
 print("abp ld")
 end
 
+if getgenv().Aiming then return getgenv().Aiming end
 
 -- // Services
 local Players = game:GetService("Players")
@@ -70,8 +70,7 @@ local FindFirstChild = Instancenew("Part").FindFirstChild
 local tableremove = table.remove
 local tableinsert = table.insert
 
-
-
+-- // Silent Aim Vars
 -- // Silent Aim Vars
 getgenv().Aiming = {
     Enabled = Rise.Silent.Enabled,
